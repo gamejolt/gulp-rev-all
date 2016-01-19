@@ -52,10 +52,10 @@ var Revisioner = (function () {
             var isJSReference = reference.path.match(/\.js$/);
 
             // Extensionless javascript file references has to to be qouted
-            if (isJSReference) {
-                regExp = '('+ qoutes +')(' + escapedRefPathBase + ')()('+ qoutes + '|$)';
-                regExps.push(new RegExp(regExp, 'g'));
-            }
+            // if (isJSReference) {
+            //     regExp = '('+ qoutes +')(' + escapedRefPathBase + ')()('+ qoutes + '|$)';
+            //     regExps.push(new RegExp(regExp, 'g'));
+            // }
 
             // Expect left and right sides of the reference to be a non-filename type character, escape special regex chars
             regExp = '('+ nonFileNameChar +')(' + escapedRefPathBase + ')(' +  escapedRefPathExt + ')('+ nonFileNameChar + '|$)';
